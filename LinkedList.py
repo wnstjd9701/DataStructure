@@ -3,23 +3,36 @@ class Node:
     def __init__(self, data):
         self.data = data # 노드가 저장하는 데이터
         self.next = None # 다음 노드에 대한 레퍼런스
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+    
+    def append(self, data):
+        new_node = Node(data)
 
-# data 2,3,5,7,11 을 담는 노드 생성
-head_node = Node(2)
-node_1 = Node(3)
-node_2 = Node(5)
-node_3 = Node(7)
-tail_node = Node(11)
-# print(head_node.data)
+        # LinkedList is empty
+        if self.head is None:
+            self.head = new_node
+            self.tail = new_node
+        # LinkedList is not empty
+        else: 
+            self.tail.next = new_node
+            self.tail = new_node
 
-# 노드들을 연결
-head_node.next = node_1
-node_1.next = node_2
-node_2.next = node_3
-node_3.next = tail_node
+# Make new LinkedList
+my_list = LinkedList()
 
-# 노드 순서대로 출력
-iterator = head_node
+# Append data at LinkedList
+my_list.append(2)
+my_list.append(3)
+my_list.append(5)
+my_list.append(7)
+my_list.append(11)
+
+# Print LinkedList
+iterator = my_list.head
+
 while iterator is not None:
     print(iterator.data)
     iterator = iterator.next
