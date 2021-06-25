@@ -7,7 +7,14 @@ class LinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
-    
+    def find_node_at(self, index):
+        iterator = self.head
+        
+        for _ in range(index):
+            iterator = iterator.next
+
+        return iterator
+
     def append(self, data):
         new_node = Node(data)
 
@@ -29,6 +36,13 @@ my_list.append(3)
 my_list.append(5)
 my_list.append(7)
 my_list.append(11)
+
+# Fine Node
+# 데이터 가지고 오기
+print("Find Node",my_list.find_node_at(3).data)
+
+# 노드에 접근( 데이터 변경 )
+my_list.find_node_at(0).data = 13
 
 # Print LinkedList
 iterator = my_list.head
