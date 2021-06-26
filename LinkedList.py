@@ -7,6 +7,18 @@ class LinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
+
+    def insert_after(self, previous_node, data):
+        new_node = Node(data)
+        # tail 노드 다음에 노드를 삽입
+        # 가장 마지막 순서 삽입
+        if previous_node is self.tail:
+            self.tail.next = new_node
+            self.tail = new_node
+        else:   # 두 노드 사이에 삽입
+            new_node.next = previous_node.next
+            previous_node = new_node
+
     def find_node_at(self, index):
         iterator = self.head
         
@@ -35,7 +47,9 @@ my_list.append(2)
 my_list.append(3)
 my_list.append(5)
 my_list.append(7)
-my_list.append(11)
+
+node_2 = my_list.find_node_at(2) # 인덱스 2에 있는 노드 접근
+my_list.insert_after(node_2, 6) # 인덱스 2 뒤에 6 삽입
 
 # Fine Node
 # 데이터 가지고 오기
