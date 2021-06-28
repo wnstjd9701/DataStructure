@@ -18,12 +18,13 @@ class LinkedList:
         
         # LinkedList is empty
         if self.head is None:
-            self.head = new_node
             self.tail = new_node
         # LinkedList is not empty
         else:
             new_node.next = self.head
-            self.head = new_node
+        
+        self.head = new_node # 
+
     def __str__(self):
         """링크드 리스트를 문자열로 표현해서 리턴하는 메소드"""
         res_str = "|"
