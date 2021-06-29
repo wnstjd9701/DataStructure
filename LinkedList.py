@@ -7,7 +7,19 @@ class LinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
+    
+    def delete_after(self, previous_node):
+        data = previous_node.next.data
+        # 지우는 node가 tail 노드일 경우
+        if previous_node.next is self.tail:
+            previous_node.next = None
+            self.tail = previous_node 
+        # tail 노드가 아닐 때 
+        else:
+            previous_node.next = previous_node.next.next
 
+        return data
+        
     def insert_after(self, previous_node, data):
         new_node = Node(data)
         # tail 노드 다음에 노드를 삽입
