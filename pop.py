@@ -13,7 +13,15 @@ class LinkedList:
 
     def pop_left(self):
         """링크드 리스트의 가장 앞 노드 삭제 메소드. 단, 링크드 리스트에 항상 노드가 있다고 가정한다"""
-        
+        data = self.head.data
+        # 삭제하려는 노드가 마지막 남은 노드일 경우 
+        if self.head is self.tail:
+            self.head = None
+            self.tail = None
+        else:
+            self.head = self.head.next
+
+        return data
 
     def prepend(self, data):
         """링크드 리스트의 가장 앞에 데이터 삽입"""
