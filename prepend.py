@@ -13,7 +13,6 @@ class LinkedList:
 
     def prepend(self, data):
         """링크드 리스트의 가장 앞에 데이터 삽입"""
-        # 코드를 쓰세요
         new_node = Node(data)
         
         # LinkedList is empty
