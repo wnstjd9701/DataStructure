@@ -54,7 +54,17 @@ class LinkedList:
             previous_node.next.prev = new_node
             previous_node.next = new_node
 
-            
+    def prepend(self, data):
+        new_node = Node(data)
+
+        if self.head is None: # head 와 tail을 새로 만든 노드로 지정
+            self.head = new_node
+            self.tail = new_node
+        else: # 이미 노드가 있으면
+            new_node.next = self.head
+            self.head.prev = new_node    
+            self.head = new_node
+
     def __str__(self):
         res_str = "|"
 
