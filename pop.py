@@ -18,6 +18,7 @@ class LinkedList:
         if self.head is self.tail:
             self.head = None
             self.tail = None
+        # 그 외의 경우 
         else:
             self.head = self.head.next
 
