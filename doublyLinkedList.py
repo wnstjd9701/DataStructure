@@ -41,6 +41,20 @@ class LinkedList:
                 iterator = iterator.next
         return None
 
+    def insert_after(self, previous_node, data):
+        new_node = Node(data)
+        if previous_node == self.tail:
+            new_node.prev = previous_node
+            previous_node.next = new_node
+            self.tail = new_node
+        else:
+            new_node.prev = previous_node
+            new_node.next = previous_node.next
+
+            previous_node.next.prev = new_node
+            previous_node.next = new_node
+
+            
     def __str__(self):
         res_str = "|"
 
