@@ -3,5 +3,5 @@ class Account:
     def __init__(self, user):
         self.name = user
 
-user1 = Account("username")
+user1 = Account("username") # self.name = username 
 print(user1.name)
