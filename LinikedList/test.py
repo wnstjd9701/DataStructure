@@ -4,4 +4,4 @@ class Account:
         self.name = user
 
 user1 = Account("username") # self.name = username 
-print(user1.name)
+print(user1.name) # class user1 name
