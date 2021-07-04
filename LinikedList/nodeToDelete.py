@@ -13,7 +13,7 @@ class LinkedList:
 
     def delete(self, node_to_delete):
         """더블리 링크드 리스트 삭제 연산 메소드"""
-        #  링크드 리스트 마지마 남은 노드 삭제 
+        #  링크드 리스트 마지막 남은 노드 삭제 
         if node_to_delete is self.head and node_to_delete is self.tail:
             self.tail = None
             self.head = None
