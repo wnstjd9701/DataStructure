@@ -33,7 +33,7 @@ class LinkedList:
         return node_to_delete.data
 
     def find_node_at(self, index):
-        """링크드 리스트 접근 연산 메소드. 파라미터 인덱스는 항상 있다고 가정한다"""
+        """링크드 리스트 접근 연산 메소드. 파라미터 인덱스는 항상 있다고 가정"""
 
         iterator = self.head # 링크드 리스트를 돌기 위해 필요한 노드 변수
 
