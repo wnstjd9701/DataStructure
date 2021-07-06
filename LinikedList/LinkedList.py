@@ -24,7 +24,7 @@ class LinkedList:
         new_node = Node(data)
         # tail 노드 다음에 노드를 삽입
         # 가장 마지막 순서 삽입
-        if previous_node is self.tail:
+        if previous_node is self.tail:  
             self.tail.next = new_node
             self.tail = new_node
         else:   # 두 노드 사이에 삽입
