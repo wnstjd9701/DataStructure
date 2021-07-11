@@ -1,5 +1,6 @@
 # stack - LIFO : Last In First Out
 from collections import deque
+# or use List
 stack = deque()
 
 # 스택 맨 끝에 데이터 추가 - append
