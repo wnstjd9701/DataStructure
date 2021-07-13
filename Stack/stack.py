@@ -18,5 +18,6 @@ print(stack[-1])
 print(stack.pop())
 print(stack.pop())
 print(stack.pop())
+print(stack.pop())
 
 print(stack)
