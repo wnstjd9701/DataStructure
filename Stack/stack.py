@@ -20,4 +20,5 @@ print(stack.pop())
 print(stack.pop())
 print(stack.pop())
 
+# stack
 print(stack)
