@@ -83,4 +83,6 @@ class LinkedList:
 
         return res_str
     
-    
+class Hash:
+    def __init__(self) -> None:
+        pass
