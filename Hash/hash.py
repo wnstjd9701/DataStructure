@@ -84,5 +84,12 @@ class LinkedList:
         return res_str
     
 class Hash:
+    private = 0
     def __init__(self) -> None:
         pass
+    def new_function(self, num):
+        private = num
+        return private
+var = Hash()
+var = var.new_function(10)
+print(var)
