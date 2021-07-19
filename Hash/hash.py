@@ -93,3 +93,6 @@ class Hash:
 var = Hash()
 var = var.new_function(10)
 print(var)
+var = Hash()
+var = var.new_function(20)
+print(var)
